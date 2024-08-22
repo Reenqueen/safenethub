@@ -91,10 +91,6 @@ h2 {
     margin-bottom: 1rem;
     text-align: center;
 }
-.moureen_image{
-    width: 100px;
-    height: 100px;
-}
 
 .course-preview, .courses-container, .tools-resources {
     display: flex;

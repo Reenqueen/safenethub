@@ -1,7 +1,13 @@
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     clickedbar();
     addprofile();
-    const categorySelect = document.getElementById('category');
+    category();
+});
+function category() {
+        const categorySelect = document.getElementById('category');
     const courseCards = document.querySelectorAll('.course-card');
 
     categorySelect.addEventListener('change', function () {
@@ -15,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
+}
 
 function addprofile(){
     const profilePictureInput = document.getElementById('profile-picture-input');
@@ -36,7 +42,7 @@ function addprofile(){
 function clickedbar(){
         // Get all navigation list items
         const navItems = document.querySelectorAll('li');
-
+        console.log(navItems);
         // Add click event listener to each list item
         navItems.forEach(item => {
             item.addEventListener('click', handleNavLinkClick);
@@ -50,8 +56,17 @@ function clickedbar(){
 
         // Get the target section ID from href attribute
         const targetId = event.currentTarget.querySelector('a').getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
+            const currentState = history.state;
+            if (!currentState || currentState.pageId !== targetId){
+                const path = `#${targetId}`;
+                history.pushState({ pageId: 'navclick' }, '', path);
+                }
+            displayitems();
+    }
 
+  function displayitems(){
+        let currenthash = window.location.hash.split('#').pop();
+        const targetSection = document.getElementById(currenthash);
         // Hide all sections
         document.querySelectorAll('section').forEach(section => {
             section.style.display = 'none';
@@ -62,6 +77,5 @@ function clickedbar(){
             targetSection.style.display = 'block';
             targetSection.scrollIntoView({ behavior: 'smooth' });
         }
-    }
-
+  }
 
