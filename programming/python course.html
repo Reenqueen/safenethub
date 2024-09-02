@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course: Beginner to Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #fff 3px solid;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 2rem;
+        }
+        article {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #555;
+        }
+        .task, .responsive-task {
+            background: #eee;
+            padding: 10px;
+            border-left: 5px solid #333;
+            margin-bottom: 10px;
+        }
+        .responsive-task {
+            background: #d1e7dd;
+            border-left: 5px solid #0f5132;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .task-container {
+            margin-top: 20px;
+        }
+        .task-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .task-container input, .task-container button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .task-container button {
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .task-container button:hover {
+            background: #555;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Python Course: Beginner to Advanced</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Beginner Level -->
+        <article>
+            <h2>Beginner Level</h2>
+            <p>Welcome to the Python programming course! In this section, we will cover the basics of Python.</p>
+
+            <h3>1. Introduction to Python</h3>
+            <p>Learn what Python is, how to install it, and write your first simple script.</p>
+            <div class="task">
+                <h4>Task 1: Write Your First Python Script</h4>
+                <p>Create a Python script that prints "Hello, World!" to the console.</p>
+                <pre><code>print("Hello, World!")</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 1: Interactive "Hello, World!"</h4>
+                <p>Try the interactive task below to simulate a Python script in your browser.</p>
+                <div class="task-container">
+                    <label for="helloInput">Enter your message:</label>
+                    <input type="text" id="helloInput" placeholder="Type your message here">
+                    <button onclick="displayMessage()">Display Message</button>
+                    <div class="result" id="helloResult"></div>
+                </div>
+                <script>
+                    function displayMessage() {
+                        const message = document.getElementById('helloInput').value;
+                        document.getElementById('helloResult').textContent = `Your message: ${message}`;
+                    }
+                </script>
+            </div>
+
+            <h3>2. Variables and Data Types</h3>
+            <p>Understand different data types (strings, integers, floats, booleans) and how to use variables.</p>
+            <div class="task">
+                <h4>Task 2: Variable Operations</h4>
+                <p>Create a script that demonstrates variable assignment and operations using different data types.</p>
+                <pre><code># Assigning values
+number = 10
+name = "Alice"
+is_student = True
+
+# Performing operations
+age = number + 5
+greeting = "Hello, " + name
+
+# Printing results
+print("Age:", age)
+print("Greeting:", greeting)
+print("Is student:", is_student)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 2: Interactive Variables</h4>
+                <p>Use the interactive form below to simulate variable operations.</p>
+                <div class="task-container">
+                    <label for="numInput">Enter a number:</label>
+                    <input type="number" id="numInput" placeholder="Enter a number">
+                    
+                    <label for="nameInput">Enter a name:</label>
+                    <input type="text" id="nameInput" placeholder="Enter a name">
+                    
+                    <button onclick="performOperations()">Perform Operations</button>
+                    <div class="result" id="operationsResult"></div>
+                </div>
+                <script>
+                    function performOperations() {
+                        const number = parseInt(document.getElementById('numInput').value);
+                        const name = document.getElementById('nameInput').value;
+                        const age = number + 5;
+                        const greeting = `Hello, ${name}`;
+                        
+                        document.getElementById('operationsResult').innerHTML = `
+                            Age: ${age} <br>
+                            Greeting: ${greeting}
+                        `;
+                    }
+                </script>
+            </div>
+
+            <h3>3. Basic Operators</h3>
+            <p>Learn about arithmetic, comparison, and logical operators.</p>
+            <div class="task">
+                <h4>Task 3: Operator Examples</h4>
+                <p>Write a script that performs different operations using arithmetic, comparison, and logical operators.</p>
+                <pre><code>a = 5
+b = 10
+
+# Arithmetic operations
+sum_ab = a + b
+difference_ab = a - b
+
+# Comparison operations
+is_equal = a == b
+is_greater = a > b
+
+# Logical operations
+and_result = (a > 0) and (b > 0)
+or_result = (a > 0) or (b < 0)
+
+# Printing results
+print("Sum:", sum_ab)
+print("Difference:", difference_ab)
+print("Is equal:", is_equal)
+print("Is greater:", is_greater)
+print("AND result:", and_result)
+print("OR result:", or_result)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 3: Interactive Operator Operations</h4>
+                <p>Try the interactive task below to perform operations using various operators.</p>
+                <div class="task-container">
+                    <label for="num1">Enter first number:</label>
+                    <input type="number" id="num1" placeholder="Enter first number">
+                    
+                    <label for="num2">Enter second number:</label>
+                    <input type="number" id="num2" placeholder="Enter second number">
+                    
+                    <button onclick="calculate()">Calculate</button>
+                    <div class="result" id="operatorResult"></div>
+                </div>
+                <script>
+                    function calculate() {
+                        const num1 = parseInt(document.getElementById('num1').value);
+                        const num2 = parseInt(document.getElementById('num2').value);
+                        const sum = num1 + num2;
+                        const difference = num1 - num2;
+                        const isEqual = num1 === num2;
+                        const isGreater = num1 > num2;
+
+                        document.getElementById('operatorResult').innerHTML = `
+                            Sum: ${sum} <br>
+                            Difference: ${difference} <br>
+                            Is equal: ${isEqual} <br>
+                            Is greater: ${isGreater}
+                        `;
+                    }
+                </script>
+            </div>
+
+            <h3>4. Control Flow: Conditionals</h3>
+            <p>Introduction to if, elif, and else statements.</p>
+            <div class="task">
+                <h4>Task 4: Conditional Statements</h4>
+                <p>Write a script that uses conditional statements to determine the largest of three numbers.</p>
+                <pre><code>num1 = 10
+num2 = 20
+num3 = 15
+
+if num1 >= num2 and num1 >= num3:
+    largest = num1
+elif num2 >= num1 and num2 >= num3:
+    largest = num2
+else:
+    largest = num3
+
+print("The largest number is:", largest)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 4: Interactive Conditionals</h4>
+                <p>Use the interactive form below to find the largest number among three inputs.</p>
+                <div class="task-container">
+                    <label for="number1">Enter first number:</label>
+                    <input type="number" id="number1" placeholder="Enter first number">
+                    
+                    <label for="number2">Enter second number:</label>
+                    <input type="number" id="number2" placeholder="Enter second number">
+                    
+                    <label for="number3">Enter third number:</label>
+                    <input type="number" id="number3" placeholder="Enter third number">
+                    
+                    <button onclick="findLargest()">Find Largest</button>
+                    <div class="result" id="largestResult"></div>
+                </div>
+                <script>
+                    function findLargest() {
+                        const num1 = parseInt(document.getElementById('number1').value);
+                        const num2 = parseInt(document.getElementById('number2').value);
+                        const num3 = parseInt(document.getElementById('number3').value);
+                        
+                        let largest;
+                        if (num1 >= num2 && num1 >= num3) {
+                            largest = num1;
+                        } else if (num2 >= num1 && num2 >= num3) {
+                            largest = num2;
+                        } else {
+                            largest = num3;
+                        }
+                        
+                        document.getElementById('largestResult').textContent = `The largest number is: ${largest}`;
+                    }
+                </script>
+            </div>
+
+            <h3>5. Loops</h3>
+            <p>Learn about for loops and while loops.</p>
+            <div class="task">
+                <h4>Task 5: Loop Examples</h4>
+                <p>Write a script that uses a for loop to print numbers 1 to 5 and a while loop to print numbers 6 to 10.</p>
+                <pre><code># For loop
+for i in range(1, 6):
+    print(i)
+
+# While loop
+i = 6
+while i <= 10:
+    print(i)
+    i += 1</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 5: Interactive Loops</h4>
+                <p>Use the interactive form below to simulate loops and display results.</p>
+                <div class="task-container">
+                    <label for="startNum">Start Number:</label>
+                    <input type="number" id="startNum" placeholder="Enter start number">
+                    
+                    <label for="endNum">End Number:</label>
+                    <input type="number" id="endNum" placeholder="Enter end number">
+                    
+                    <button onclick="loopNumbers()">Run Loops</button>
+                    <div class="result" id="loopResult"></div>
+                </div>
+                <script>
+                    function loopNumbers() {
+                        const start = parseInt(document.getElementById('startNum').value);
+                        const end = parseInt(document.getElementById('endNum').value);
+                        let output = '';
+
+                        // For loop
+                        output += 'For loop results:<br>';
+                        for (let i = start; i <= end; i++) {
+                            output += `${i}<br>`;
+                        }
+
+                        // While loop
+                        output += '<br>While loop results:<br>';
+                        let i = start;
+                        while (i <= end) {
+                            output += `${i}<br>`;
+                            i++;
+                        }
+
+                        document.getElementById('loopResult').innerHTML = output;
+                    }
+                </script>
+            </div>
+        </article>
+
+        <!-- Intermediate Level -->
+        <article>
+            <h2>Intermediate Level</h2>
+            <p>This section will introduce you to more complex Python concepts.</p>
+
+            <h3>1. Functions</h3>
+            <p>Learn how to define and call functions, and understand scope and parameters.</p>
+            <div class="task">
+                <h4>Task 6: Define a Function</h4>
+                <p>Create a function that calculates the factorial of a number and use it in your script.</p>
+                <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+number = 5
+print("Factorial of", number, "is", factorial(number))</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 6: Interactive Factorial Calculator</h4>
+                <p>Use the interactive form below to calculate the factorial of a number.</p>
+                <div class="task-container">
+                    <label for="factorialInput">Enter a number:</label>
+                    <input type="number" id="factorialInput" placeholder="Enter a number">
+                    
+                    <button onclick="calculateFactorial()">Calculate Factorial</button>
+                    <div class="result" id="factorialResult"></div>
+                </div>
+                <script>
+                    function calculateFactorial() {
+                        const n = parseInt(document.getElementById('factorialInput').value);
+                        let result = 1;
+                        
+                        for (let i = 1; i <= n; i++) {
+                            result *= i;
+                        }
+                        
+                        document.getElementById('factorialResult').textContent = `Factorial of ${n} is ${result}`;
+                    }
+                </script>
+            </div>
+
+            <h3>2. Data Structures: Lists and Dictionaries</h3>
+            <p>Understand how to use lists and dictionaries for storing collections of data.</p>
+            <div class="task">
+                <h4>Task 7: Create a Contact List</h4>
+                <p>Create a contact list program using dictionaries to store names and phone numbers. Implement functionality to add, remove, and search contacts.</p>
+                <pre><code>contacts = {}
+
+def add_contact(name, number):
+    contacts[name] = number
+
+def remove_contact(name):
+    if name in contacts:
+        del contacts[name]
+
+def search_contact(name):
+    return contacts.get(name, "Contact not found")
+
+add_contact("Alice", "123-456-7890")
+add_contact("Bob", "987-654-3210")
+print(search_contact("Alice"))
+remove_contact("Alice")
+print(search_contact("Alice"))</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 7: Interactive Contact List</h4>
+                <p>Use the form below to interact with a contact list.</p>
+                <div class="task-container">
+                    <label for="contactName">Enter contact name:</label>
+                    <input type="text" id="contactName" placeholder="Contact name">
+                    
+                    <label for="contactNumber">Enter contact number:</label>
+                    <input type="text" id="contactNumber" placeholder="Contact number">
+                    
+                    <button onclick="addContact()">Add Contact</button>
+                    <button onclick="removeContact()">Remove Contact</button>
+                    <button onclick="searchContact()">Search Contact</button>
+                    
+                    <div class="result" id="contactResult"></div>
+                </div>
+                <script>
+                    const contacts = {};
+
+                    function addContact() {
+                        const name = document.getElementById('contactName').value;
+                        const number = document.getElementById('contactNumber').value;
+                        contacts[name] = number;
+                        document.getElementById('contactResult').textContent = `Contact added: ${name} - ${number}`;
+                    }
+
+                    function removeContact() {
+                        const name = document.getElementById('contactName').value;
+                        if (name in contacts) {
+                            delete contacts[name];
+                            document.getElementById('contactResult').textContent = `Contact removed: ${name}`;
+                        } else {
+                            document.getElementById('contactResult').textContent = `Contact not found: ${name}`;
+                        }
+                    }
+
+                    function searchContact() {
+                        const name = document.getElementById('contactName').value;
+                        const number = contacts[name] || "Contact not found";
+                        document.getElementById('contactResult').textContent = `Contact info: ${name} - ${number}`;
+                    }
+                </script>
+            </div>
+
+            <h3>3. File Handling</h3>
+            <p>Learn how to read from and write to files.</p>
+            <div class="task">
+                <h4>Task 8: File Operations</h4>
+                <p>Create a script that reads a text file and counts the number of words in it.</p>
+                <pre><code>with open('sample.txt', 'r') as file:
+    content = file.read()
+
+words = content.split()
+word_count = len(words)
+
+print("Number of words in file:", word_count)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 8: Interactive Log File Analyzer</h4>
+                <p>Use the form below to analyze a log file's contents and count occurrences of different log levels.</p>
+                <div class="task-container">
+                    <label for="logInput">Enter log text:</label>
+                    <textarea id="logInput" rows="5" placeholder="Enter log text here"></textarea>
+                    
+                    <button onclick="analyzeLog()">Analyze Log</button>
+                    <div class="result" id="logResult"></div>
+                </div>
+                <script>
+                    function analyzeLog() {
+                        const logText = document.getElementById('logInput').value;
+                        const logLevels = ['INFO', 'WARNING', 'ERROR'];
+                        const counts = logLevels.reduce((acc, level) => {
+                            acc[level] = (logText.match(new RegExp(level, 'g')) || []).length;
+                            return acc;
+                        }, {});
+
+                        let resultText = '';
+                        for (const [level, count] of Object.entries(counts)) {
+                            resultText += `${level}: ${count}<br>`;
+                        }
+                        
+                        document.getElementById('logResult').innerHTML = resultText;
+                    }
+                </script>
+            </div>
+
+            <h3>4. Modules and Packages</h3>
+            <p>Learn how to create and import modules and packages.</p>
+            <div class="task">
+                <h4>Task 9: Create and Use a Module</h4>
+                <p>Create a module named <code>math_functions.py</code> with a function to calculate the square of a number. Import and use this module in another script.</p>
+                <pre><code># math_functions.py
+def square(num):
+    return num * num
+
+# main_script.py
+import math_functions
+
+number = 4
+print("Square of", number, "is", math_functions.square(number))</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 9: Interactive Math Module</h4>
+                <p>Simulate a math module function using the form below.</p>
+                <div class="task-container">
+                    <label for="numberInput">Enter a number:</label>
+                    <input type="number" id="numberInput" placeholder="Enter a number">
+                    
+                    <button onclick="calculateSquare()">Calculate Square</button>
+                    <div class="result" id="squareResult"></div>
+                </div>
+                <script>
+                    function calculateSquare() {
+                        const num = parseInt(document.getElementById('numberInput').value);
+                        const square = num * num;
+                        document.getElementById('squareResult').textContent = `Square of ${num} is ${square}`;
+                    }
+                </script>
+            </div>
+        </article>
+
+        <!-- Advanced Level -->
+        <article>
+            <h2>Advanced Level</h2>
+            <p>In this section, we will explore more complex and advanced Python topics.</p>
+
+            <h3>1. Object-Oriented Programming (OOP)</h3>
+            <p>Learn the principles of OOP, including classes, objects, inheritance, and polymorphism.</p>
+            <div class="task">
+                <h4>Task 10: Define a Class</h4>
+                <p>Create a class <code>Car</code> with attributes for make, model, and year. Add methods to display the car's details and age.</p>
+                <pre><code>class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_details(self):
+        return f"{self.year} {self.make} {self.model}"
+
+    def car_age(self):
+        current_year = 2024
+        return current_year - self.year
+
+car = Car("Toyota", "Corolla", 2015)
+print(car.display_details())
+print("Car age:", car.car_age())</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 10: Interactive Car Class</h4>
+                <p>Use the form below to create and interact with a car object.</p>
+                <div class="task-container">
+                    <label for="carMake">Enter car make:</label>
+                    <input type="text" id="carMake" placeholder="Enter car make">
+                    
+                    <label for="carModel">Enter car model:</label>
+                    <input type="text" id="carModel" placeholder="Enter car model">
+                    
+                    <label for="carYear">Enter car year:</label>
+                    <input type="number" id="carYear" placeholder="Enter car year">
+                    
+                    <button onclick="createCar()">Display Car Details</button>
+                    <div class="result" id="carResult"></div>
+                </div>
+                <script>
+                    class Car {
+                        constructor(make, model, year) {
+                            this.make = make;
+                            this.model = model;
+                            this.year = year;
+                        }
+                        
+                        displayDetails() {
+                            return `${this.year} ${this.make} ${this.model}`;
+                        }
+                        
+                        carAge() {
+                            const currentYear = new Date().getFullYear();
+                            return currentYear - this.year;
+                        }
+                    }
+                    
+                    function createCar() {
+                        const make = document.getElementById('carMake').value;
+                        const model = document.getElementById('carModel').value;
+                        const year = parseInt(document.getElementById('carYear').value);
+                        const car = new Car(make, model, year);
+                        
+                        document.getElementById('carResult').innerHTML = `
+                            Car Details: ${car.displayDetails()}<br>
+                            Car Age: ${car.carAge()} years
+                        `;
+                    }
+                </script>
+            </div>
+
+            <h3>2. Error Handling</h3>
+            <p>Learn how to handle exceptions and errors using try, except, finally, and raise.</p>
+            <div class="task">
+                <h4>Task 11: Error Handling Example</h4>
+                <p>Create a script that handles division by zero and invalid input errors.</p>
+                <pre><code>try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+except ValueError:
+    print("Error: Invalid input. Please enter a number.")
+finally:
+    print("Execution complete.")</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 11: Interactive Error Handling</h4>
+                <p>Simulate error handling for division by zero and invalid input using the form below.</p>
+                <div class="task-container">
+                    <label for="divisionInput">Enter a number:</label>
+                    <input type="number" id="divisionInput" placeholder="Enter a number">
+                    
+                    <button onclick="performDivision()">Perform Division</button>
+                    <div class="result" id="errorResult"></div>
+                </div>
+                <script>
+                    function performDivision() {
+                        const num = parseInt(document.getElementById('divisionInput').value);
+                        let result;
+                        let message = '';
+                        
+                        try {
+                            if (isNaN(num)) throw 'Invalid input';
+                            if (num === 0) throw 'Division by zero';
+                            result = 10 / num;
+                            message = `Result: ${result}`;
+                        } catch (error) {
+                            if (error === 'Division by zero') {
+                                message = 'Error: Division by zero is not allowed.';
+                            } else if (error === 'Invalid input') {
+                                message = 'Error: Invalid input. Please enter a number.';
+                            } else {
+                                message = `Error: ${error}`;
+                            }
+                        } finally {
+                            message += '<br>Execution complete.';
+                        }
+                        
+                        document.getElementById('errorResult').innerHTML = message;
+                    }
+                </script>
+            </div>
+
+            <h3>3. Advanced Data Structures: Sets and Tuples</h3>
+            <p>Explore sets and tuples for handling data in Python.</p>
+            <div class="task">
+                <h4>Task 12: Working with Sets and Tuples</h4>
+                <p>Create a script that demonstrates basic operations with sets and tuples.</p>
+                <pre><code> #Sets
+my_set = {1, 2, 3, 4}
+my_set.add(5)
+my_set.remove(2)
+
+# Tuples
+my_tuple = (1, 2, 3, 4)
+first_element = my_tuple[0]
+
+print("Set contents:", my_set)
+print("First element of tuple:", first_element)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 12: Interactive Sets and Tuples</h4>
+                <p>Use the form below to perform operations with sets and tuples.</p>
+                <div class="task-container">
+                    <label for="tupleInput">Enter comma-separated tuple values:</label>
+                    <input type="text" id="tupleInput" placeholder="e.g., 1, 2, 3">
+                    
+                    <label for="setValue">Enter value to add to set:</label>
+                    <input type="number" id="setValue" placeholder="Enter a number">
+                    
+                    <button onclick="performSetOperations()">Perform Operations</button>
+                    <div class="result" id="setTupleResult"></div>
+                </div>
+                <script>
+                    function performSetOperations() {
+                        const tupleValues = document.getElementById('tupleInput').value.split(',').map(val => parseInt(val.trim()));
+                        const setValue = parseInt(document.getElementById('setValue').value);
+                        
+                        const mySet = new Set([1, 2, 3, 4]);
+                        mySet.add(setValue);
+                        mySet.delete(2);
+                        
+                        const myTuple = tupleValues;
+                        const firstElement = myTuple[0] || 'Tuple is empty';
+
+                        document.getElementById('setTupleResult').innerHTML = `
+                            Set contents: ${Array.from(mySet)}<br>
+                            First element of tuple: ${firstElement}
+                        `;
+                    }
+                </script>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

@@ -88,8 +88,11 @@ function category() {
 
 function addprofile(){
     const profilePictureInput = document.getElementById('profile-picture-input');
-    const profilePicture = document.querySelector('.profile-picture img');
-
+    const profilePicture = document.getElementById('user-image');
+        profilePicture.addEventListener('click',()=>{
+        console.log(profilePictureInput);
+        profilePictureInput.click();
+    });
     profilePictureInput.addEventListener('change', function() {
         const file = this.files[0];
         if (file) {
@@ -100,6 +103,7 @@ function addprofile(){
             reader.readAsDataURL(file);
         }
     });
+
 }
 
 function clickedbar(){
@@ -126,17 +130,20 @@ function clickedbar(){
 
   function displayitems(){
         const currenthash = window.location.hash.split('#').pop();
-        console.log(currenthash);
+        //console.log(currenthash);
         if(currenthash=='home'){
-            console.log('home');
+            //console.log('home');
             Initialpage();
-        }else if(currenthash=='course'){
+        }else if(currenthash=='courses'){
                 document.querySelectorAll('.Course_info').forEach(Course_info=>{
                   Course_info.style.display='block';
                 });
             navLinks(currenthash);
-
         }else{
+            if(currenthash=='profile'){
+                //location='register.html';
+                navLinks(currenthash);
+            }
             navLinks(currenthash);
     }
   }
@@ -160,6 +167,10 @@ function clickedbar(){
               targetSection.style.display = 'block';
               targetSection.scrollIntoView({ behavior: 'smooth' });
         document.getElementById('contact').style.display = 'block';
+        const courseCards = document.querySelectorAll('.course-card');
+        courseCards.forEach(card=>{
+            card.style.display='block';
+        })
   }
 
 
@@ -179,6 +190,7 @@ let courseclicked = document.querySelectorAll('.more');
 
  function displaycourse(){
      const currenthash = window.location.hash.split('/').pop();
+     console.log(currenthash);
      const course_element = document.getElementById(currenthash);
     document.querySelectorAll('section').forEach(section => {
         section.style.display = 'none';
@@ -187,18 +199,18 @@ let courseclicked = document.querySelectorAll('.more');
     document.querySelectorAll('.Course_info').forEach(Course_info=>{
       Course_info.style.display='none';
     });
-    let width = window.innerWidth;
-    let styles = '';
-    if (width<769) {
-        styles='display:'+'block;'+'padding:'+'5px;';
-        //console.log(width);
+    const width = window.innerWidth;
+    if(width<768){
+        course_element.style.display='block';
     }else{
-        //console.log(width);
-        styles='display:'+'flex;'+'padding:'+'5px;';
-
+        course_element.style.display='flex';
     }
-     course_element.querySelectorAll('.course-card').forEach(card=>{
-        card.style.margin='10px';
-    });
-    course_element.setAttribute('style',`${styles}`);
  }
+  
+
+   const hamburger = document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('header.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
