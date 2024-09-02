@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Programming Course - Intermediate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+        .section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .section pre {
+            background: #eee;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .task {
+            background: #e7f1ff;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            margin-top: 20px;
+        }
+        .quiz {
+            background: #e7e7ff;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 5px solid #3333ff;
+        }
+        .quiz input[type="button"] {
+            background: #3333ff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .quiz input[type="button"]:hover {
+            background: #5555ff;
+        }
+        .feedback {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #d1ffd1;
+            border: 1px solid #33cc33;
+            border-radius: 5px;
+        }
+        .incorrect {
+            background: #ffd1d1;
+            border-color: #cc3333;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cybersecurity Programming Course - Intermediate</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Intermediate Section: Secure Coding Practices -->
+        <div class="section">
+            <h2>Secure Coding Practices</h2>
+            <p><strong>Understanding Secure Coding:</strong></p>
+            <p>Secure coding is the practice of writing computer programs that are free from vulnerabilities and resistant to attacks. As an intermediate developer, it's crucial to understand and implement secure coding practices to protect against various types of attacks.</p>
+            <p><strong>Key Concepts:</strong></p>
+            <ul>
+                <li><strong>Input Validation:</strong> All user inputs should be validated to prevent malicious data from being processed. For example, SQL injection attacks can be mitigated by validating and sanitizing inputs.</li>
+                <li><strong>Output Encoding:</strong> Encoding output data helps prevent Cross-Site Scripting (XSS) attacks. It ensures that any user-provided data is correctly interpreted by the browser.</li>
+                <li><strong>Authentication and Authorization:</strong> Implementing strong authentication mechanisms (such as OAuth) and ensuring proper authorization checks help prevent unauthorized access.</li>
+                <li><strong>Data Encryption:</strong> Encrypt sensitive data both at rest and in transit. This helps protect data from being intercepted or accessed by unauthorized parties.</li>
+                <li><strong>Error Handling:</strong> Proper error handling can prevent sensitive information from being exposed. Avoid displaying stack traces or other debugging information to end-users.</li>
+                <li><strong>Logging and Monitoring:</strong> Regularly logging system activities and monitoring for suspicious behavior can help detect and respond to potential security incidents.</li>
+            </ul>
+
+            <!-- Task 1: Secure Coding Practices -->
+            <div class="task">
+                <h3>Task 1: Implement Input Validation</h3>
+                <p>Create a simple form with fields for username and email. Write JavaScript code to validate these inputs: the username should not contain special characters, and the email should be in a proper email format. Display error messages for invalid inputs.</p>
+            </div>
+
+            <!-- Responsive Quiz: Check Your Understanding -->
+            <div class="quiz">
+                <h3>Quiz: Check Your Understanding</h3>
+                <p>Which of the following is a technique used to prevent SQL injection attacks?</p>
+                <ul>
+                    <li><input type="radio" name="q1" value="a"> Using inline styles in HTML</li>
+                    <li><input type="radio" name="q1" value="b"> Validating and sanitizing user inputs</li>
+                    <li><input type="radio" name="q1" value="c"> Ignoring user inputs</li>
+                    <li><input type="radio" name="q1" value="d"> Using CSS for styling</li>
+                </ul>
+                <input type="button" value="Submit Answer" onclick="checkAnswer()">
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <!-- Additional Content for Intermediate Level -->
+            <h3>Additional Resources and Tools:</h3>
+            <ul>
+                <li><strong>OWASP Top Ten:</strong> Familiarize yourself with the OWASP Top Ten, a list of the most critical web application security risks. Understanding these risks is essential for secure coding.</li>
+                <li><strong>Static Analysis Tools:</strong> Use tools like ESLint and SonarQube to analyze your code for security vulnerabilities. These tools can help identify common coding errors and security risks.</li>
+                <li><strong>Security Frameworks:</strong> Learn about security frameworks and libraries (e.g., Spring Security, Django Security) that provide built-in security features for web applications.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var feedback = document.getElementById("feedback");
+            var radios = document.getElementsByName("q1");
+            var selected = false;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    selected = true;
+                    if (radios[i].value === "b") {
+                        feedback.innerText = "Correct! Validating and sanitizing user inputs helps prevent SQL injection attacks.";
+                        feedback.classList.remove("incorrect");
+                    } else {
+                        feedback.innerText = "Incorrect. Remember, validating and sanitizing user inputs is a key defense against SQL injection.";
+                        feedback.classList.add("incorrect");
+                    }
+                    feedback.style.display = "block";
+                    break;
+                }
+            }
+            if (!selected) {
+                feedback.innerText = "Please select an answer.";
+                feedback.classList.add("incorrect");
+                feedback.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

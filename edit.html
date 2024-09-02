@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>edit profile</title>
+        <style>
+            /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+width: 100%;
+}
+.screen{
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+header .logo h1 {
+    margin: 0;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links li {
+    margin: 0 15px;
+}
+
+
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .nav-links a:hover {
+    text-decoration: underline;
+}
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+.hamburger-menu .line {
+    width: 100%;
+    height: 4px;
+    background-color:white; /* Change this to your preferred color */
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+}
+
+#resources,#blog,#community,#profile,#affiliate,#courses{
+    display: none;
+}
+.banner {
+    text-align: center;
+    padding: 2rem;
+    background: #007bff;
+    color: #fff;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.banner p {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.banner .btn {
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.banner .btn:hover {
+    background: #f4f4f4;
+}
+
+/* Sections */
+section {
+    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.corse_intro{
+    width: 100%;
+    overflow-x: auto;
+    overflow: auto;
+}
+.slide_show{
+    overflow: hidden;
+    width: auto;
+    display: flex;
+}
+.course-preview{
+    padding: 5px;
+}
+.course-preview:hover{
+     cursor: pointer;
+     font-weight: bolder;
+}
+#courses{
+    width: 100%;
+}
+.btn:hover{
+    color: red;
+}
+.moureen_image{
+    width: 100px;
+    height: 100px;
+}
+#cybersecurity{
+    padding: 5px;
+}
+.course-card{
+    padding: 2px;
+}
+.courses_slideshow{
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.courses-container{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    gap: 1rem;
+}
+.more_info,.less_info{
+    display: none;
+}
+.course-preview, .tools-resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.course-card,.guide-item, .glossary-term, .blog-post, .team-member, .discussion, .qa-session {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.course-card img, .tool-card img, .guide-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-info h3, .tool-info h4, .guide-item h4, .glossary-term h4, .blog-post h3, .team-member h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.course-info p, .tool-info p, .guide-item p, .glossary-term p, .blog-post p, .team-member p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+/*tools section*/
+#resources{
+    width: 100%;
+    overflow: hidden;
+}
+.slide_tools{
+    width: 100%;
+    overflow-x: auto;
+}
+.tools-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 1vw;
+
+}
+.tool-list{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1vw;
+}
+.tool-card{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50vw;
+    max-width: 250px;
+    text-align: center;
+}
+.profile-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 20px;
+}
+
+.profile-picture img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-right: 20px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.edit-btn {
+    background-color: #fff;
+    color: #4A90E2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile-body {
+    padding: 20px;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-section h2 {
+    margin-bottom: 10px;
+    color: #4A90E2;
+   
+ font-size: 20px;
+}
+.edit-profile-form {
+    display: none; /* Hide the form initially */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.textarea {
+    height: 100px;
+}
+
+.btn {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #357ABD;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+}
+
+.cancel-btn:hover {
+    background-color: #aaa;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.preference {
+    margin-bottom: 10px;
+}
+
+.preference label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.preference select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.action-btn {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.action-btn:hover {
+    background-color: #357ABD;
+}
+/* Affiliate Section */
+#affiliate {
+    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.affiliate-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.affiliate-info h3 {
+    margin: 0;
+}
+
+.affiliate-info p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.a-ffiliate-tools {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.affiliate-tools h3 {
+    margin-top: 0;
+}
+
+.affiliate-tools ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.affiliate-tools ul li {
+    margin: 0.5rem 0;
+}
+
+.affiliate-tools ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.affiliate-tools ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .nav-links li {
+        margin: 10px 0;
+    }
+    header {
+        background-image: url('photos/logo1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .screen{
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .course-preview, .tools-resources {
+        flex-direction: column;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+       font-size: 1rem;
+    }
+    #courses{
+        width: 90%;
+    }
+    #courses h2{
+        scroll-snap-points-x: none;
+    }
+    .slide_show{
+        width: 200%;
+    }
+    .courses-container{
+        width: 100%;
+        display: block;
+    }
+    .course-card{
+       width: 80%;
+
+    }
+    .slide_tools{
+        width: 100%;
+        overflow-x: auto;
+    }
+    #resources{
+        width: 90%;
+    }
+    .tool-list{
+        overflow: hidden;
+        width: 350%;
+    }
+    .tool-card{
+        width: 400px;
+    }
+    .more_info,.less_info{
+    display: flex;
+    font-size: 120%;
+    font-weight: bold;
+}
+  .more_info:hover,.less_info:hover{
+    color: blue;
+}
+.info{
+    display: none;
+}
+}
+        </style>
+    </head>
+    <body>
+<section>
+  <div class="profile-body">
+        <div class="profile-section">
+            <h2>Security Settings</h2>
+            <button class="action-btn" onclick="updatePassword()">Update Password</button>
+            <button class="action-btn" onclick="enable2FA()">Enable Two-Factor Authentication</button>
+            <button class="action-btn" onclick="viewActivity()">View Account Activity</button>
+        </div>
+
+        <div class="profile-section">
+            <h2>Learning Preferences</h2>
+            <div class="preference">
+                <label for="learning-style">Preferred Learning Style:</label>
+                <select id="learning-style">
+                    <option value="video">Video</option>
+                    <option value="text">Text</option>
+                    <option value="interactive">Interactive</option>
+                </select>
+            </div>
+            <div class="preference">
+                <label for="notifications">Notification Settings:</label>
+                <select id="notifications">
+                    <option value="email">Email</option>
+                    <option value="in-app">In-App</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+        </div>
+        <div class="edit-profile-container">
+    <h1>Edit Profile</h1>
+    <form id="edit-profile-form">
+        <div class="form-group">
+            <label for="profile-picture">Profile Picture:</label>
+            <input type="file" id="profile-picture" name="profile-picture">
+        </div>
+
+        <div class="form-group">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" value="John Doe">
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="johndoe123">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" value="johndoe@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="current-password">Current Password:</label>
+            <input type="password" id="current-password" name="current-password">
+        </div>
+
+        <div class="form-group">
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password">
+        </div>
+
+        <div class="form-group">
+            <label for="confirm-password">Confirm New Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" value="0716347663">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address">123 Main St, City, Country</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="learning-style">Preferred Learning Style:</label>
+            <select id="learning-style" name="learning-style">
+                <option value="video">Video</option>
+                <option value="text">Text</option>
+                <option value="interactive">Interactive</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="notifications">Notification Settings:</label>
+            <select id="notifications" name="notifications">
+                <option value="email">Email</option>
+                <option value="in-app">In-App</option>
+                <option value="none">None</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="two-factor-auth">Enable Two-Factor Authentication:</label>
+            <input type="checkbox" id="two-factor-auth" name="two-factor-auth">
+        </div>
+
+        <button type="submit" class="save-btn">Save Changes</button>
+        <button type="button" class="cancel-btn" onclick="cancelEdit()">Cancel</button>
+    </form>
+        <div class="profile-section">
+            <h2>Certification and Credentials</h2>
+            <button class="action-btn" onclick="downloadCertificates()">Download Certificates</button>
+            <button class="action-btn" onclick="shareOnLinkedIn()">Share on LinkedIn</button>
+        </div>
+
+        <div class="profile-section">
+            <h2>Account Management</h2>
+            <p><strong>Subscription:</strong> Premium Plan</p>
+            <button class="action-btn" onclick="viewPaymentHistory()">View Payment History</button>
+            <button class="action-btn" onclick="deleteAccount()">Delete Account</button>
+        </div>
+    </div>
+</div>
+</section>
+</body>
+</html>

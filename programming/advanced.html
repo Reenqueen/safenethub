@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Programming Course - Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+        .section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .section pre {
+            background: #eee;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .task {
+            background: #e7f1ff;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            margin-top: 20px;
+        }
+        .quiz {
+            background: #e7e7ff;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 5px solid #3333ff;
+        }
+        .quiz input[type="button"] {
+            background: #3333ff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .quiz input[type="button"]:hover {
+            background: #5555ff;
+        }
+        .feedback {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #d1ffd1;
+            border: 1px solid #33cc33;
+            border-radius: 5px;
+        }
+        .incorrect {
+            background: #ffd1d1;
+            border-color: #cc3333;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cybersecurity Programming Course - Advanced</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Advanced Section: Cryptography -->
+        <div class="section">
+            <h2>Advanced Cryptography</h2>
+            <p><strong>Introduction to Cryptography:</strong></p>
+            <p>Cryptography is a critical aspect of cybersecurity, providing methods for secure communication and data protection. This section covers advanced cryptographic techniques and their applications.</p>
+            <p><strong>Key Cryptography Concepts:</strong></p>
+            <ul>
+                <li><strong>Symmetric Encryption:</strong> Symmetric encryption uses the same key for encryption and decryption. Common algorithms include AES (Advanced Encryption Standard) and DES (Data Encryption Standard).</li>
+                <li><strong>Asymmetric Encryption:</strong> Asymmetric encryption uses a pair of keys: a public key for encryption and a private key for decryption. Examples include RSA (Rivest-Shamir-Adleman) and ECC (Elliptic Curve Cryptography).</li>
+                <li><strong>Hash Functions:</strong> Hash functions generate a fixed-size string of characters from input data. They are used for data integrity verification. Common hash functions include SHA-256 (Secure Hash Algorithm 256-bit) and MD5 (Message Digest Algorithm 5).</li>
+            </ul>
+
+            <!-- Task 1: Implement a Simple Encryption Program -->
+            <div class="task">
+                <h3>Task 1: Implement a Simple Encryption Program</h3>
+                <p>Using Python, write a program that encrypts and decrypts text using the AES algorithm. Start by installing the PyCryptodome library, and use it to implement encryption and decryption functions.</p>
+                <pre><code>
+# Example Python code using PyCryptodome for AES encryption
+from Crypto.Cipher import AES
+from Crypto.Random import get_random_bytes
+
+# Generate a random key
+key = get_random_bytes(16)
+
+# Create AES cipher
+cipher = AES.new(key, AES.MODE_EAX)
+
+# Encrypt data
+nonce = cipher.nonce
+ciphertext, tag = cipher.encrypt_and_digest(b"Secure Message")
+print("Encrypted:", ciphertext)
+                </code></pre>
+            </div>
+
+            <!-- Responsive Quiz: Check Your Understanding -->
+            <div class="quiz">
+                <h3>Quiz: Check Your Understanding</h3>
+                <p>Which of the following is true about asymmetric encryption?</p>
+                <ul>
+                    <li><input type="radio" name="q2" value="a"> It uses the same key for encryption and decryption.</li>
+                    <li><input type="radio" name="q2" value="b"> It is faster than symmetric encryption.</li>
+                    <li><input type="radio" name="q2" value="c"> It uses different keys for encryption and decryption.</li>
+                    <li><input type="radio" name="q2" value="d"> It does not require keys.</li>
+                </ul>
+                <input type="button" value="Submit Answer" onclick="checkAnswer()">
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <!-- Advanced Section: Network Security -->
+            <div class="section">
+                <h2>Advanced Network Security</h2>
+                <p><strong>Introduction to Network Security:</strong></p>
+                <p>Network security is critical in protecting data in transit. This section covers advanced network security techniques and tools.</p>
+                <p><strong>Key Network Security Concepts:</strong></p>
+                <ul>
+                    <li><strong>Firewalls:</strong> Firewalls are used to filter and monitor incoming and outgoing traffic. They enforce security policies and block unauthorized access.</li>
+                    <li><strong>Intrusion Detection Systems (IDS):</strong> IDS monitor network traffic for suspicious activities. They help in identifying and responding to potential security threats.</li>
+                    <li><strong>Virtual Private Networks (VPNs):</strong> VPNs encrypt network connections, providing secure communication channels over public networks. They are essential for remote access and privacy.</li>
+                    <li><strong>SSL/TLS Protocols:</strong> Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols secure data transmission between clients and servers. Understanding how to implement and configure SSL/TLS is crucial for web security.</li>
+                </ul>
+
+                <!-- Task 2: Set Up and Configure a Firewall -->
+                <div class="task">
+                    <h3>Task 2: Set Up and Configure a Firewall</h3>
+                    <p>Set up a firewall on your local network or virtual environment. Configure rules to allow specific types of traffic and block others. Monitor the firewall logs to observe blocked and allowed connections.</p>
+                </div>
+
+                <div class="task">
+                    <h3>Task 3: Implement a Simple IDS</h3>
+                    <p>Using Python, create a simple Intrusion Detection System that monitors network traffic for suspicious activities, such as multiple failed login attempts. Generate alerts when suspicious behavior is detected.</p>
+                    <pre><code>
+# Example of a simple IDS script in Python
+import socket
+
+# Setup a socket to listen to network traffic
+s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
+s.bind(("192.168.1.1", 0))  # Replace with your local IP address
+s.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
+s.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
+
+while True:
+    packet = s.recvfrom(65565)
+    # Analyze the packet for suspicious activity
+    print(packet)
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var feedback = document.getElementById("feedback");
+            var radios = document.getElementsByName("q2");
+            var selected = false;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    selected = true;
+                    if (radios[i].value === "c") {
+                        feedback.innerText = "Correct! Asymmetric encryption uses different keys for encryption and decryption.";
+                        feedback.classList.remove("incorrect");
+                    } else {
+                        feedback.innerText = "Incorrect. Asymmetric encryption uses a public key for encryption and a private key for decryption.";
+                        feedback.classList.add("incorrect");
+                    }
+                    feedback.style.display = "block";
+                    break;
+                }
+            }
+            if (!selected) {
+                feedback.innerText = "Please select an answer.";
+                feedback.classList.add("incorrect");
+                feedback.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

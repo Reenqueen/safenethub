@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course: Beginner to Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #fff 3px solid;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 2rem;
+        }
+        article {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        h3 {
+            color: #555;
+        }
+        .task {
+            background: #eee;
+            padding: 10px;
+            border-left: 5px solid #333;
+            margin-bottom: 10px;
+        }
+        .responsive-task {
+            background: #d1e7dd;
+            padding: 10px;
+            border-left: 5px solid #0f5132;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Python Course: Beginner to Advanced</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Beginner Level -->
+        <article>
+            <h2>Beginner Level</h2>
+            <p>Welcome to the Python programming course! In this section, we will cover the basics of Python.</p>
+
+            <h3>1. Introduction to Python</h3>
+            <p>Learn what Python is, how to install it, and write your first simple script.</p>
+            <div class="task">
+                <h4>Task 1: Write Your First Python Script</h4>
+                <p>Create a Python script that prints "Hello, World!" to the console.</p>
+                <pre><code>print("Hello, World!")</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 1: Share Your Script</h4>
+                <p>Share your script with a peer or online community and ask for feedback on code style and structure.</p>
+            </div>
+
+            <h3>2. Variables and Data Types</h3>
+            <p>Understand different data types (strings, integers, floats, booleans) and how to use variables.</p>
+            <div class="task">
+                <h4>Task 2: Variable Operations</h4>
+                <p>Create a script that demonstrates variable assignment and operations using different data types.</p>
+                <pre><code># Assigning values
+number = 10
+name = "Alice"
+is_student = True
+
+# Performing operations
+age = number + 5
+greeting = "Hello, " + name
+
+# Printing results
+print("Age:", age)
+print("Greeting:", greeting)
+print("Is student:", is_student)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 2: Create a Mini Program</h4>
+                <p>Create a small program that asks for user input and performs operations based on the input. For example, ask for the user's name and age, then print a greeting and age in 5 years.</p>
+            </div>
+
+            <h3>3. Basic Operators</h3>
+            <p>Learn about arithmetic, comparison, and logical operators.</p>
+            <div class="task">
+                <h4>Task 3: Operator Examples</h4>
+                <p>Write a script that performs different operations using arithmetic, comparison, and logical operators.</p>
+                <pre><code>a = 5
+b = 10
+
+# Arithmetic operations
+sum_ab = a + b
+difference_ab = a - b
+
+# Comparison operations
+is_equal = a == b
+is_greater = a > b
+
+# Logical operations
+and_result = (a > 0) and (b > 0)
+or_result = (a > 0) or (b < 0)
+
+# Printing results
+print("Sum:", sum_ab)
+print("Difference:", difference_ab)
+print("Is equal:", is_equal)
+print("Is greater:", is_greater)
+print("AND result:", and_result)
+print("OR result:", or_result)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 3: Build a Simple Calculator</h4>
+                <p>Create a simple calculator that performs addition, subtraction, multiplication, and division based on user input.</p>
+            </div>
+
+            <h3>4. Control Flow: Conditionals</h3>
+            <p>Introduction to if, elif, and else statements.</p>
+            <div class="task">
+                <h4>Task 4: Conditional Statements</h4>
+                <p>Write a script that uses conditional statements to determine the largest of three numbers.</p>
+                <pre><code>num1 = 10
+num2 = 20
+num3 = 15
+
+if num1 >= num2 and num1 >= num3:
+    largest = num1
+elif num2 >= num1 and num2 >= num3:
+    largest = num2
+else:
+    largest = num3
+
+print("The largest number is:", largest)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 4: Create a Simple Voting System</h4>
+                <p>Build a script that asks the user for their age and determines if they are eligible to vote (18 or older).</p>
+            </div>
+
+            <h3>5. Control Flow: Loops</h3>
+            <p>Learn about for and while loops and how to iterate over sequences.</p>
+            <div class="task">
+                <h4>Task 5: Looping Through a List</h4>
+                <p>Create a script that loops through a list of numbers and prints each one.</p>
+                <pre><code>numbers = [1, 2, 3, 4, 5]
+
+for number in numbers:
+    print(number)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 5: Implement a Number Guessing Game</h4>
+                <p>Create a number guessing game where the program generates a random number and the user has to guess it. Use loops to allow multiple guesses until the user guesses correctly.</p>
+            </div>
+        </article>
+
+        <!-- Intermediate Level -->
+        <article>
+            <h2>Intermediate Level</h2>
+            <p>In this section, we'll dive deeper into Python's capabilities.</p>
+
+            <h3>1. Functions</h3>
+            <p>Learn how to define and call functions, and understand the concept of scope.</p>
+            <div class="task">
+                <h4>Task 6: Creating Functions</h4>
+                <p>Write a function to calculate the factorial of a number.</p>
+                <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print("Factorial of 5:", factorial(5))
+print("Factorial of 7:", factorial(7))</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 6: Create a Function with Multiple Parameters</h4>
+                <p>Write a function that takes multiple parameters (e.g., a name and age) and returns a formatted string with a greeting. Test it with different inputs.</p>
+            </div>
+
+            <h3>2. Data Structures</h3>
+            <p>Explore lists, tuples, dictionaries, and sets in Python.</p>
+            <div class="task">
+                <h4>Task 7: Working with Data Structures</h4>
+                <p>Write a script that demonstrates the use of lists and dictionaries to store and retrieve data.</p>
+                <pre><code>students = ['Alice', 'Bob', 'Charlie']
+scores = [85, 92, 78]
+
+student_scores = dict(zip(students, scores))
+
+for student, score in student_scores.items():
+    print(f"{student}: {score}")</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 7: Build a Contact List</h4>
+                <p>Create a contact list program using dictionaries to store names and phone numbers. Implement functionality to add, remove, and search contacts.</p>
+            </div>
+
+            <h3>3. File Handling</h3>
+            <p>Learn how to read from and write to files.</p>
+            <div class="task">
+                <h4>Task 8: File Operations</h4>
+                <p>Create a script that reads a text file and counts the number of words in it.</p>
+                <pre><code>with open('sample.txt', 'r') as file:
+    content = file.read()
+
+words = content.split()
+word_count = len(words)
+
+print("Number of words in file:", word_count)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 8: Implement a Log File Analyzer</h4>
+                <p>Create a script that reads a log file, counts the number of occurrences of different log levels (e.g., ERROR, WARNING, INFO), and prints the results.</p>
+            </div>
+
+            <h3>4. Exception Handling</h3>
+            <p>Understand how to handle errors and exceptions in Python.</p>
+            <div class="task">
+                <h4>Task 9: Exception Handling</h4>
+                <p>Write a script that handles division by zero using try-except blocks.</p>
+                <pre><code>try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 9: Create a Robust File Reader</h4>
+                <p>Enhance the file reading script to handle potential errors like file not found or read errors, and provide user-friendly messages.</p>
+            </div>
+
+            <h3>5. Modules and Packages</h3>
+            <p>Learn about importing and using modules and packages.</p>
+            <div class="task">
+                <h4>Task 10: Using Modules</h4>
+                <p>Create a script that imports and uses a standard library module, such as math or datetime.</p>
+                <pre><code>import math
+
+number = 16
+sqrt_number = math.sqrt(number)
+
+print("Square root of", number, "is", sqrt_number)</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 10: Build a Custom Module</h4>
+                <p>Create a custom module with a few functions (e.g., mathematical operations) and import it into another script. Demonstrate its usage.</p>
+            </div>
+        </article>
+
+        <!-- Advanced Level -->
+        <article>
+            <h2>Advanced Level</h2>
+            <p>Here we will explore advanced concepts and techniques.</p>
+
+            <h3>1. Object-Oriented Programming</h3>
+            <p>Understand classes, objects, inheritance, and polymorphism.</p>
+            <div class="task">
+                <h4>Task 11: Creating Classes</h4>
+                <p>Write a script that defines a class with methods and creates instances of that class.</p>
+                <pre><code>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 25)
+
+print(person1.greet())
+print(person2.greet())</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 11: Create a Class Hierarchy</h4>
+                <p>Create a class hierarchy with a base class and several derived classes. Implement and demonstrate polymorphism by overriding methods in derived classes.</p>
+            </div>
+
+            <h3>2. Decorators and Generators</h3>
+            <p>Learn how to use decorators to modify function behavior and generators for efficient data processing.</p>
+            <div class="task">
+                <h4>Task 12: Decorators</h4>
+                <p>Create a decorator to measure the execution time of a function.</p>
+                <pre><code>import time
+
+def time_it(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"Execution time: {end_time - start_time} seconds")
+        return result
+    return wrapper
+
+@time_it
+def slow_function():
+    time.sleep(2)
+    print("Function complete!")
+
+slow_function()</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 12: Create a Custom Decorator</h4>
+                <p>Write a custom decorator that logs function calls and their arguments. Apply it to a few functions and test it.</p>
+            </div>
+
+            <h3>3. Working with APIs</h3>
+            <p>Understand how to interact with web APIs and process JSON data.</p>
+            <div class="task">
+                <h4>Task 13: API Interaction</h4>
+                <p>Write a script that fetches data from a public API and processes it.</p>
+                <pre><code>import requests
+
+response = requests.get('https://api.github.com/users/octocat')
+user_data = response.json()
+
+print("User Login:", user_data['login'])
+print("User Name:", user_data['name'])
+print("Bio:", user_data['bio'])</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 13: Build an API Client</h4>
+                <p>Build a small API client that interacts with a different API (e.g., weather data) and displays relevant information in a user-friendly format.</p>
+            </div>
+
+            <h3>4. Multithreading and Multiprocessing</h3>
+            <p>Explore multithreading and multiprocessing for concurrent tasks.</p>
+            <div class="task">
+                <h4>Task 14: Multithreading</h4>
+                <p>Create a script that uses multithreading to perform tasks concurrently.</p>
+                <pre><code>import threading
+import time
+
+def print_numbers():
+    for i in range(5):
+        print(i)
+        time.sleep(1)
+
+def print_letters():
+    for letter in 'abcde':
+        print(letter)
+        time.sleep(1)
+
+thread1 = threading.Thread(target=print_numbers)
+thread2 = threading.Thread(target=print_letters)
+
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 14: Implement a Concurrent Downloader</h4>
+                <p>Write a script that downloads multiple files concurrently using threads or processes. Track and display the download progress for each file.</p>
+            </div>
+
+            <h3>5. Unit Testing</h3>
+            <p>Learn how to write and run unit tests using the unittest module.</p>
+            <div class="task">
+                <h4>Task 15: Writing Tests</h4>
+                <p>Write unit tests for a Python function using the unittest module.</p>
+                <pre><code>import unittest
+
+def add(a, b):
+    return a + b
+
+class TestAddFunction(unittest.TestCase):
+    def test_add_positive_numbers(self):
+        self.assertEqual(add(1, 2), 3)
+
+    def test_add_negative_numbers(self):
+        self.assertEqual(add(-1, -1), -2)
+
+    def test_add_mixed_numbers(self):
+        self.assertEqual(add(-1, 1), 0)
+
+if __name__ == '__main__':
+    unittest.main()</code></pre>
+            </div>
+            <div class="responsive-task">
+                <h4>Responsive Task 15: Test a Complex Function</h4>
+                <p>Create a set of unit tests for a more complex function or class. Ensure to test various edge cases and possible failures.</p>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Python Course. All rights reserved.</p>
+    </footer>
+</body>
+</html>
